@@ -6,10 +6,10 @@ process.stdin.on("readable", function () {
     if (input !== null) {
         var instruction = input.toString().trim();
         switch (instruction) {
-            case 'show version':
+            case 'showVersion':
                 process.stdout.write(process.versions.node);
                 break;
-            case 'show lang':
+            case 'showLang':
                 process.stdout.write(process.env.lang);
                 break;
             case 'getOSinfo':
@@ -19,7 +19,7 @@ process.stdin.on("readable", function () {
                 process.stdout.write('Quitting app!\n');
                 process.exit();
             default:
-                process.stderr.write('Wrong instruction!');
+                process.stderr.write('Wrong instruction!\n');
                 break;
         }
     }
