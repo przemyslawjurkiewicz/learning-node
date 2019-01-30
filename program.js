@@ -8,7 +8,7 @@ process.stdin.on("readable", function () {
                 process.stdout.write(process.versions.node);
                 break;
             case 'show lang':
-                process.stdout.write(process.env.LANG);
+                process.stdout.write(process.env.lang);
                 break;
             case 'exit':
                 process.stdout.write('Quitting app!\n');
